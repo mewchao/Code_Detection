@@ -143,7 +143,7 @@ int main() {
         hashtable1.put(word, 1);
     }
 
-    vector <string > v1=std::get<1>(readFiles());
+    vector <string > v1=std::get<0>(readFiles());
 
     processFile(v1,hashtable1);
 
@@ -156,7 +156,7 @@ int main() {
         hashtable2.put(word, 1);
     }
 
-    vector <string > v2=std::get<2>(readFiles());
+    vector <string > v2=std::get<1>(readFiles());
 
     processFile(v2,hashtable2);
 
@@ -175,6 +175,13 @@ int main() {
 
     hashtable3.displayHashTable(hashtable3);
     //======================================
+    cout<<"test1.c和test2.c欧几里得距离"<<computeEuclideanDistance(hashtable1.data,hashtable2.data)<<endl;
+    cout<<"test1.c和test3.c欧几里得距离"<<computeEuclideanDistance(hashtable1.data,hashtable3.data)<<endl;
+    cout<<"test3.c和test2.c欧几里得距离"<<computeEuclideanDistance(hashtable3.data,hashtable2.data)<<endl;
+
+    cout<<"test1.c和test2.c余弦相似度"<<computeCosineSimilarity(hashtable1.data,hashtable2.data)<<endl;
+    cout<<"test1.c和test3.c余弦相似度"<<computeCosineSimilarity(hashtable1.data,hashtable3.data)<<endl;
+    cout<<"test3.c和test2.c余弦相似度"<<computeCosineSimilarity(hashtable3.data,hashtable2.data)<<endl;
     system("pause");
 
 }

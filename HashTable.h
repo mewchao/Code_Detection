@@ -12,7 +12,7 @@ using std::endl;
 
 //哈希表->数据结构
 class HashTable {
-private:
+public:
     //哈希表的大小
     int size;
     //存放key
