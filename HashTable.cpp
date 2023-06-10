@@ -140,7 +140,7 @@ int main() {
     HashTable hashtable1(32);
 
     for ( auto word: key_word) {
-        hashtable1.put(word, 1);
+        hashtable1.put(word, 0);
     }
 
     vector <string > v1=std::get<0>(readFiles());
@@ -153,7 +153,7 @@ int main() {
     HashTable hashtable2(32);
 
     for ( auto word: key_word) {
-        hashtable2.put(word, 1);
+        hashtable2.put(word, 0);
     }
 
     vector <string > v2=std::get<1>(readFiles());
@@ -166,7 +166,7 @@ int main() {
     HashTable hashtable3(32);
 
     for ( auto word: key_word) {
-        hashtable3.put(word, 1);
+        hashtable3.put(word, 0);
     }
 
     vector <string > v3=std::get<2>(readFiles());
