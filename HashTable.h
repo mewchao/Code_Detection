@@ -18,7 +18,7 @@ private:
     //存放key
     vector<string> slot;
     //存放value
-    vector<int> data;
+    vector<int> data={0};
 
 public:
     HashTable(int size) {
@@ -27,7 +27,9 @@ public:
         this->slot.resize(size);
         this->data.resize(size);
     }
-
+    int getsize(){
+        return size;
+    }
 //    哈希表::插入操作，接收键值和数据作为参数，并将它们存储在哈希表中。
 //    该函数首先调用哈希函数来计算键的哈希值，然后使用该值作为索引来访问哈希表。
 //    如果该索引为空，则直接将键和数据存储在该位置上。如果该索引不为空，那么需要检查该位置上的键是否与要插入的键相同。
@@ -123,28 +125,8 @@ public:
         }
     }
 
-//    bool contains( string key) const {
-//        // 计算key的哈希值
-//        int index = hashFunction(key,this->size);
-//
-//        // 遍历对应的链表
-//        for (const auto& node : data[index]) {
-//            if (node.first == key) { // 找到了匹配的键
-//                return true;
-//            }
-//        }
-//
-//        // 在该位置上没有找到匹配的键
-//        return false;
-//    }
+
 };
 
-////#ifndef SHOW_COPYRIGHT
-////#define SHOW_COPYRIGHT
-//void show_copyright() {
-//    cout<<endl<<endl<<
-//        "Copyright <c++> 2023-2023 22220231_游竣超. All Right Reserved"<<endl<<endl;
-//}
-////#endif SHOW_COPYRIGHT
 
 #endif //CHECK_HASHTABLE_H
