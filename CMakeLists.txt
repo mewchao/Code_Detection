@@ -3,4 +3,4 @@ project(Check)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(Code_Detection main.cpp HashTable.h)
+add_executable(Code_Detection HashTable.h HashTable.cpp )
